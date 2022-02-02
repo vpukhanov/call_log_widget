@@ -1,0 +1,43 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="Categories">
+
+        <SwitchPreferenceCompat
+            app:defaultValue="true"
+            app:icon="@drawable/ic_baseline_call_made_24"
+            app:key="outgoing"
+            app:title="@string/outgoing" />
+
+        <SwitchPreferenceCompat
+            app:defaultValue="true"
+            app:icon="@drawable/ic_baseline_call_received_24"
+            app:key="received"
+            app:title="@string/received" />
+
+        <SwitchPreferenceCompat
+            app:defaultValue="true"
+            app:icon="@drawable/ic_baseline_call_missed_24"
+            app:key="missed"
+            app:title="@string/missed" />
+
+        <SwitchPreferenceCompat
+            app:defaultValue="true"
+            app:icon="@drawable/ic_baseline_phone_missed_24"
+            app:key="rejected"
+            app:title="@string/rejected" />
+
+        <SwitchPreferenceCompat
+            app:defaultValue="true"
+            app:icon="@drawable/ic_baseline_block_24"
+            app:key="blocked"
+            app:title="@string/blocked" />
+
+        <SwitchPreferenceCompat
+            app:defaultValue="true"
+            app:icon="@drawable/ic_baseline_voicemail_24"
+            app:key="voicemail"
+            app:title="@string/voicemail" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

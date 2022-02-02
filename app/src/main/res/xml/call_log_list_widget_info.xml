@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:description="@string/app_widget_description"
+    android:initialLayout="@layout/call_log_list_widget"
+    android:minWidth="165dp"
+    android:minHeight="55dp"
+    android:previewLayout="@layout/call_log_list_widget"
+    android:resizeMode="horizontal|vertical"
+    android:targetCellWidth="3"
+    android:targetCellHeight="1"
+    android:updatePeriodMillis="1800000"
+    android:widgetCategory="home_screen" />
+
+<!--        android:configure="me.runchi.calllogwidget.activity.SettingsActivity"-->
+<!--        android:widgetFeatures="reconfigurable|configuration_optional"-->
