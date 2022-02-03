@@ -6,7 +6,9 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.preference.PreferenceFragmentCompat
+import androidx.preference.PreferenceManager
 import me.runchi.calllogwidget.R
+import me.runchi.calllogwidget.function.updateWidgets
 
 
 class SettingsActivity : AppCompatActivity() {
@@ -21,6 +23,13 @@ class SettingsActivity : AppCompatActivity() {
         }
 
         checkPhonePermissions()
+        updateWidgetOnPreferenceChange()
+    }
+
+    private fun updateWidgetOnPreferenceChange() {
+        PreferenceManager
+            .getDefaultSharedPreferences(this)
+            .registerOnSharedPreferenceChangeListener { _, _ -> updateWidgets(this) }
     }
 
     private fun checkPhonePermissions() {

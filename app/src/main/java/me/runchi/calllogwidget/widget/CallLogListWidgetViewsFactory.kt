@@ -31,8 +31,11 @@ class CallLogListWidgetViewsFactory(
         calls.clear()
 
         while (cursor.moveToNext() && count < REMOTE_VIEWS_COUNT) {
-            calls.add(Call(context, cursor))
-            ++count
+            val call = Call(context, cursor)
+            if (call.satisfiesPreferences()) {
+                calls.add(Call(context, cursor))
+                ++count
+            }
         }
     }
 
